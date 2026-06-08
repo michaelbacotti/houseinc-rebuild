@@ -1,0 +1,21 @@
+{
+  "name": "HOUSE, Inc.",
+  "short_name": "HOUSE, Inc.",
+  "description": "Housing Opportunities to Ultimately Shelter Everyone \u2014 a 501(c)(3) nonprofit preventing homelessness through emergency rental assistance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2c3e50",
+  "theme_color": "#2c3e50",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
