@@ -1,0 +1,16 @@
+# ============================================================
+# HOUSE, Inc. — Clean URL Redirects
+# ============================================================
+
+# Root index
+/index.html / 301
+
+# Static pages
+/mission.html /mission/ 301
+/programs.html /programs/ 301
+/apply.html /apply/ 301
+/donate.html /donate/ 301
+/contact.html /contact/ 301
+/stories.html /stories/ 301
+/board.html /board/ 301
+/transparency.html /transparency/ 301

@@ -1,0 +1,20 @@
+# Dev / scratch
+.DS_Store
+*.log
+*.swp
+*.bak
+*.orig
+node_modules/
+.wrangler/
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Don't ignore generate_sitemap.py (it IS the build tool)
+# (negation would go here if we needed one)
