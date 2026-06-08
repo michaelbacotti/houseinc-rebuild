@@ -7,8 +7,11 @@
 - **Authoritative folder:** `entities/house/website/`
 - **GitHub repo:** `michaelbacotti/houseinc-rebuild`
 - **CF Pages project:** `houseinc-rebuild`
-- **Domain:** `houseinc501c3.com` (current Squarespace → migrate to CF Pages)
+- **Primary domain:** `houseinc501c3.com` (CF Pages custom domain, SSL active)
+- **Secondary domain:** `houseinc501c3.org` (CF Pages custom domain, SSL active — currently serves same site, canonical tags point to .com)
 - **Initial deploy URL:** `https://houseinc-rebuild.pages.dev/`
+- **DNS:** Both domains moved from Squarespace to Cloudflare nameservers (paul.ns.cloudflare.com, autumn.ns.cloudflare.com)
+- **SSL:** Auto-issued by Google CA via CF Pages
 
 ## Build Pattern
 
@@ -84,15 +87,39 @@ Per `memory/website-standards-doctrine.md`:
 - ✅ Canonical URL on every page (absolute, trailing slash)
 - ✅ Meta description + og:title + og:description + og:url on every page
 
-## Domain Migration Steps (post-Mike-approval)
+## Domain Architecture (current state, 2026-06-08)
 
-1. Mike reviews site at `https://houseinc-rebuild.pages.dev/`
-2. Mike confirms any content gaps filled
-3. Mike moves `houseinc501c3.com` DNS to Cloudflare (if not already there)
-4. Mike adds custom domain in CF Pages project settings
-5. Wait for SSL provisioning (~5 min)
-6. Verify https://houseinc501c3.com/ resolves
-7. Cancel Squarespace subscription
+Both `houseinc501c3.com` and `houseinc501c3.org` are attached as custom domains to the `houseinc-rebuild` CF Pages project. Both serve the **same site** (single source of truth). Every page has `<link rel="canonical" href="https://houseinc501c3.com/...">` so Google consolidates all search equity to .com.
+
+**Why both, with .com as primary:**
+- `.com` has accumulated brand recognition and donor mindshare from the Squarespace era
+- `.org` exists for board members / donors / IRS records that may reference it
+- Both serve → no donor is ever "404 not found" regardless of which they type
+- Canonical tag prevents duplicate-content SEO penalty
+- Single deploy pipeline serves both (one repo, one project, one `git push`)
+
+**Decision recorded:** Mike originally asked about making .org primary. Recommendation was to keep .com primary and park .org as a secondary serving the same site. This is what shipped.
+
+## Domain Migration Steps (executed 2026-06-08)
+
+1. ✅ Mike reviewed site at `https://houseinc-rebuild.pages.dev/`
+2. ✅ Mike confirmed content (donate page, contact, transparency, etc. all approved)
+3. ✅ Mike moved `houseinc501c3.com` DNS to Cloudflare (changed nameservers at Squarespace registrar to Cloudflare NS)
+4. ✅ Mike moved `houseinc501c3.org` DNS to Cloudflare (same procedure)
+5. ✅ Mike added both custom domains in CF Pages project settings
+6. ✅ SSL certificates auto-issued (Google CA, ~5 min)
+7. ✅ Both `https://houseinc501c3.com/` and `https://houseinc501c3.org/` resolve to the new site
+8. ⏳ **TODO: Cancel Squarespace subscription** (recommend waiting 30 days to confirm no broken-link reports)
+
+## Squarespace Cutover Checklist
+
+- [x] DNS moved to Cloudflare (both domains)
+- [x] New site live on both domains
+- [ ] Export Squarespace content (built-in export, save backup)
+- [ ] Screenshot the Squarespace site for archival
+- [ ] Wait 30 days for any broken-link reports
+- [ ] Cancel Squarespace subscription
+- [ ] Confirm Squarespace DNS removal doesn't affect us (we own DNS now)
 
 ---
-_Last updated: 2026-06-08_
+_Last updated: 2026-06-08 (post domain migration)
