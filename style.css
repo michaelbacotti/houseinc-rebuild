@@ -134,7 +134,7 @@ a:hover { color: var(--slate); text-decoration: underline; text-underline-offset
 
 #site-footer .container {
  display: grid;
- grid-template-columns: 1.5fr 1fr 1fr;
+ grid-template-columns: 1.5fr 1fr 1fr 1fr;
  gap: 2.5rem;
 }
 
@@ -624,7 +624,7 @@ a:hover { color: var(--slate); text-decoration: underline; text-underline-offset
 @media (max-width: 860px) {
  .pillars-grid { grid-template-columns: 1fr; }
  .stats-grid { grid-template-columns: 1fr; gap: 2.5rem; }
- #site-footer .container { grid-template-columns: 1fr; gap: 2rem; }
+ #site-footer .container { grid-template-columns: 1fr 1fr; gap: 2rem; }
 
  .nav-toggle { display: block; }
 
