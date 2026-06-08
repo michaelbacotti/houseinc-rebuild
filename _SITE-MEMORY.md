@@ -44,11 +44,11 @@ Pages are hand-edited. The only generated artifact is `sitemap.xml` (run `python
 ## Open Items (must be resolved by Mike)
 
 1. **Current board roster** — Master Organizer lists 5 active, but Inge Thomas resigned April 6, 2026 per `entities/house/references/house-inc.md`. The Board page intentionally does NOT publish a roster — it directs people to email for the current list. Mike should confirm whether to publish a public roster on the site or keep the current "request by email" approach.
-2. **Verified email addresses:**
-   - `donations@houseinc501c3.com` — confirmed in Master File
-   - `help@houseinc501c3.com` — created for the apply page, **needs Mike to set up**
-   - `info@houseinc501c3.com` — created for the contact page, **needs Mike to set up**
-   - `board@houseinc501c3.com` — created for the board page, **needs Mike to set up**
+2. **Verified email addresses (current state, 2026-06-08):**
+   - `donations@houseinc501c3.com` — confirmed in Master File, set up in iCloud
+   - `info@houseinc501c3.com` — set up in iCloud
+   - `help@houseinc501c3.com` and `board@houseinc501c3.com` — **collapsed to `info@`** in the site. Apply page and Board page now both use `info@` with prefilled subject lines (`Rental Assistance Request`, `Board Governance`). Mike can add `help@` as a friendlier alias later (~2 min in iCloud Settings → Custom Email Domain) if he wants — it would not require any code change, just adding the alias in iCloud and optionally re-pointing the mailto. **See Workboard card "HOUSE Email" for the full decision context.**
+   - **Architecture decision:** For a small 501(c)(3), use one iCloud inbox with multiple role-based aliases. iCloud+ Custom Email Domain routes all aliases to the same inbox. Mailto links with prefilled `?subject=` carry the subcategory (Rental Assistance, Board Governance, etc.) — same UX as separate mailboxes, but no forwarding plumbing required.
 3. **990-N filing status** — entity reference flags 2023 filing as unconfirmed. Transparency page mentions filings honestly but does not invent dates. Mike should verify with Anderson Advisors before publishing any specific year.
 4. **Founding date** — Squarespace said "July 2021"; canonical entity reference says "~2022". I have used neither specific date on the public site (mission page just says "founded"). Mike should confirm.
 5. **"HOUSE" New Hampshire trade name** — registered. Renewal $50 due Sep 29, 2026 (per `entities/house/references/house-inc.md`).
