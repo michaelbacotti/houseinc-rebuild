@@ -57,9 +57,25 @@ def generate_sitemap():
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ]
+    # Per bithues/tredey/triadive convention (2026-08-08): every <url> needs
+    # <lastmod>. HOUSE has no frontmatter dates, so use filesystem mtime.
+    # Pages are static HTML; deploy = mtime update, so mtime is accurate.
+    from datetime import date as _date
+    today = _date.today().isoformat()
+    url_to_lastmod = {}
+    for f in html_files():
+        url = to_sitemap_url(f)
+        try:
+            import datetime as _dt
+            url_to_lastmod[url] = _dt.date.fromtimestamp(f.stat().st_mtime).isoformat()
+        except Exception:
+            url_to_lastmod[url] = today
+
     for url, pri in unique:
         lines.append('  <url>')
         lines.append(f'    <loc>{BASE_URL}{url}</loc>')
+        lm = url_to_lastmod.get(url, today)
+        lines.append(f'    <lastmod>{lm}</lastmod>')
         lines.append(f'    <priority>{pri}</priority>')
         lines.append('  </url>')
     lines.append('</urlset>')
