@@ -18,18 +18,28 @@
  <meta property="og:image" content="https://houseinc501c3.com/og-image.jpg">
  <meta property="og:url" content="https://houseinc501c3.com/contact/">
  <link rel="stylesheet" href="/style.css">
- <!-- Google tag (gtag.js) — GA4 (HOUSE Inc property 299582647) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3Y6Z1L3GK"></script>
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-G3Y6Z1L3GK');
- </script>
 </head>
 <body>
- <div id="site-nav"></div>
- <main>
+ <a class="skip-link" href="#main">Skip to main content</a>
+ <header class="site-header">
+  <div class="nav-inner">
+   <a href="/" class="nav-logo">HOUSE<strong>,</strong> Inc.</a>
+   <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+   <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">☰</label>
+   <nav class="main-nav" aria-label="Main">
+    <ul>
+     <li><a href="/mission/">Mission</a></li>
+     <li><a href="/programs/">Programs</a></li>
+     <li><a href="/apply/">Apply for Help</a></li>
+     <li><a href="/stories/">Impact</a></li>
+     <li><a href="/transparency/">Transparency</a></li>
+     <li><a href="/contact/">Contact</a></li>
+     <li><a href="/donate/" class="nav-donate">Donate</a></li>
+    </ul>
+   </nav>
+  </div>
+ </header>
+ <main id="main">
   <section class="page-header">
    <div class="container">
     <h1>Contact</h1>
@@ -37,44 +47,45 @@
    </div>
   </section>
 
+  <section class="status-notice" aria-label="Program status">
+   <div class="container">
+    <h2>Program status</h2>
+    <p><strong>Emergency Housing Assistance Program is currently paused due to limited resources at this time.</strong></p>
+    <p>Email and phone responses will be significantly delayed; email is preferred whenever possible. If you are facing eviction right now, please contact the resources listed in the callout below or see <a href="/apply/">our apply page</a> for alternative resources in your area. When the situation improves, we will make an announcement and reopen the program.</p>
+   </div>
+  </section>
+
   <div class="container">
    <div class="page-content">
-
-    <div class="callout" style="border-left-color: #c0392b; background-color: #fdf2f2;">
-     <h3>Program status</h3>
-     <p><strong>Emergency Housing Assistance Program is currently paused due to limited resources at this time.</strong></p>
-     <p style="margin-top:0.5rem;">Email and phone responses will be significantly delayed; email is preferred whenever possible. If you are facing eviction right now, please contact the resources listed in the callout below or see <a href="/apply/">our apply page</a> for alternative resources in your area. When the situation improves, we will make an announcement and reopen the program.</p>
-    </div>
-
     <h2>Mailing address</h2>
     <div class="callout">
-     <p style="font-family: Georgia, serif; font-size: 1.1rem;">
+     <p class="callout-address">
       HOUSE, Inc.<br>
       3225 McLeod Dr, Suite 100<br>
       Las Vegas, NV 89121
      </p>
-     <p style="font-size:0.9rem; color: var(--ink-muted); margin-top:0.5rem;">This is our registered nonprofit mailing address. It is not a public office — please do not visit without an appointment.</p>
+     <p class="fine">This is our registered nonprofit mailing address. It is not a public office — please do not visit without an appointment.</p>
     </div>
 
     <h2>Phone</h2>
     <div class="callout">
-     <p style="font-size: 1.1rem;"><strong>702-871-8535</strong></p>
-     <p style="font-size:0.9rem; color: var(--ink-muted); margin-top:0.5rem;">Please leave a voicemail with your name, number, and the reason for your call. A board member will return your call within 2 business days.</p>
+     <p class="callout-phone"><strong>702-871-8535</strong></p>
+     <p class="fine">Please leave a voicemail with your name, number, and the reason for your call. We will return your call as soon as we are able.</p>
     </div>
 
     <h2>Email</h2>
     <ul class="info-list">
      <li>
       <span class="label">Applications</span>
-      <span class="value"><a href="mailto:info@houseinc501c3.com?subject=Rental%20Assistance%20Request">info@houseinc501c3.com</a><br><span style="font-size:0.9rem; color: var(--ink-muted);">For households seeking emergency rental assistance. Please use the subject line <em>Rental Assistance Request</em>.</span></span>
+      <span class="value"><a href="mailto:info@houseinc501c3.com?subject=Rental%20Assistance%20Request">info@houseinc501c3.com</a><br><span class="fine">For households seeking emergency rental assistance. Please use the subject line <em>Rental Assistance Request</em>.</span></span>
      </li>
      <li>
       <span class="label">Donations</span>
-      <span class="value"><a href="mailto:donations@houseinc501c3.com">donations@houseinc501c3.com</a><br><span style="font-size:0.9rem; color: var(--ink-muted);">For contribution questions, tax receipts, planned giving, or stock/DAF gifts.</span></span>
+      <span class="value"><a href="mailto:donations@houseinc501c3.com">donations@houseinc501c3.com</a><br><span class="fine">For contribution questions, tax receipts, planned giving, or stock/DAF gifts.</span></span>
      </li>
      <li>
       <span class="label">General / Media</span>
-      <span class="value"><a href="mailto:info@houseinc501c3.com">info@houseinc501c3.com</a><br><span style="font-size:0.9rem; color: var(--ink-muted);">For everything else: board inquiries, partnerships, media requests, general questions.</span></span>
+      <span class="value"><a href="mailto:info@houseinc501c3.com">info@houseinc501c3.com</a><br><span class="fine">For everything else: board inquiries, partnerships, media requests, general questions.</span></span>
      </li>
     </ul>
 
@@ -89,19 +100,68 @@
     <div class="callout">
      <h3>If you are in immediate housing crisis</h3>
      <p>If you are facing an <strong>active eviction today or this week</strong>, please also contact:</p>
-     <ul style="margin: 0.5rem 0 0 1.4rem;">
+     <ul>
       <li><strong>2-1-1</strong> (United Way helpline — available 24/7 in most areas)</li>
       <li>Your local legal aid organization — many tenants have legal defenses to eviction</li>
       <li>The Salvation Army, Catholic Charities, or your local faith-based aid network</li>
      </ul>
-     <p style="margin-top: 0.75rem;">Our small board cannot guarantee same-day response. The resources above may be faster for emergencies.</p>
+     <p class="callout-note">Our small board cannot guarantee same-day response. The resources above may be faster for emergencies.</p>
     </div>
-
    </div>
   </div>
+
+  <section class="cta-banner">
+   <div class="container">
+    <h2>Every gift keeps a roof overhead.</h2>
+    <p>When our program reopens, it will be because donors made it possible.</p>
+    <a href="/donate/" class="btn-primary">Donate</a>
+   </div>
+  </section>
  </main>
- <div id="site-footer"></div>
- <script src="/nav.js"></script>
- <script src="/footer.js"></script>
+ <footer class="site-footer">
+  <div class="container">
+   <div class="footer-grid">
+    <div>
+     <h4>HOUSE, Inc.</h4>
+     <p>Housing Opportunities to Ultimately Shelter Everyone, Inc.</p>
+     <p>A 501(c)(3) nonprofit preventing homelessness through emergency rental assistance.</p>
+     <p class="footer-ein">EIN 87-1948148</p>
+    </div>
+    <div>
+     <h4>Get Involved</h4>
+     <ul>
+      <li><a href="/donate/">Donate</a></li>
+      <li><a href="/programs/">Our Programs</a></li>
+      <li><a href="/apply/">Apply for Help</a></li>
+      <li><a href="/contact/">Contact</a></li>
+     </ul>
+    </div>
+    <div>
+     <h4>Contact</h4>
+     <p>3225 McLeod Dr, Suite 100<br>Las Vegas, NV 89121</p>
+     <p>702-871-8535</p>
+     <p><a href="mailto:donations@houseinc501c3.com">donations@houseinc501c3.com</a></p>
+     <p><a href="mailto:info@houseinc501c3.com">info@houseinc501c3.com</a></p>
+    </div>
+    <div>
+     <h4>Follow Us</h4>
+     <ul>
+      <li><a href="https://www.facebook.com/HOUSE.nonprofit.501c3" rel="noopener" target="_blank">Facebook</a></li>
+      <li><a href="https://www.linkedin.com/company/houseinc501c3/" rel="noopener" target="_blank">LinkedIn</a></li>
+      <li><a href="https://x.com/HOUSEinc501c3" rel="noopener" target="_blank">X (Twitter)</a></li>
+     </ul>
+    </div>
+   </div>
+   <p class="footer-tax">HOUSE, Inc. is a 501(c)(3) tax-exempt organization. Donations are tax-deductible to the fullest extent allowed by law.</p>
+   <div class="footer-bottom">
+    <span>© 2026 HOUSE, Inc. — Housing Opportunities to Ultimately Shelter Everyone, Inc.</span>
+    <nav aria-label="Footer">
+     <a href="/board/">Board &amp; Governance</a>
+     <a href="/transparency/">Financial Transparency</a>
+     <a href="/contact/">Contact</a>
+    </nav>
+   </div>
+  </div>
+ </footer>
 </body>
 </html>

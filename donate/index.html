@@ -18,18 +18,28 @@
  <meta property="og:image" content="https://houseinc501c3.com/og-image.jpg">
  <meta property="og:url" content="https://houseinc501c3.com/donate/">
  <link rel="stylesheet" href="/style.css">
- <!-- Google tag (gtag.js) — GA4 (HOUSE Inc property 299582647) -->
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3Y6Z1L3GK"></script>
- <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-G3Y6Z1L3GK');
- </script>
 </head>
 <body>
- <div id="site-nav"></div>
- <main>
+ <a class="skip-link" href="#main">Skip to main content</a>
+ <header class="site-header">
+  <div class="nav-inner">
+   <a href="/" class="nav-logo">HOUSE<strong>,</strong> Inc.</a>
+   <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+   <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">☰</label>
+   <nav class="main-nav" aria-label="Main">
+    <ul>
+     <li><a href="/mission/">Mission</a></li>
+     <li><a href="/programs/">Programs</a></li>
+     <li><a href="/apply/">Apply for Help</a></li>
+     <li><a href="/stories/">Impact</a></li>
+     <li><a href="/transparency/">Transparency</a></li>
+     <li><a href="/contact/">Contact</a></li>
+     <li><a href="/donate/" class="nav-donate">Donate</a></li>
+    </ul>
+   </nav>
+  </div>
+ </header>
+ <main id="main">
   <section class="page-header">
    <div class="container">
     <h1>Donate</h1>
@@ -37,45 +47,50 @@
    </div>
   </section>
 
+  <section class="status-notice" aria-label="Program status">
+   <div class="container">
+    <h2>Program status</h2>
+    <p><strong>Emergency Housing Assistance Program is currently paused due to limited resources at this time.</strong></p>
+    <p>Donations made while the program is paused are still gratefully accepted and will be used to support our work when the program reopens. We will post an announcement at this site when the situation improves. If you are facing eviction right now, please see <a href="/apply/">our apply page</a> for alternative resources.</p>
+   </div>
+  </section>
+
   <div class="container">
    <div class="page-content">
-
-    <div class="callout" style="border-left-color: #c0392b; background-color: #fdf2f2;">
-     <h3>Program status</h3>
-     <p><strong>Emergency Housing Assistance Program is currently paused due to limited resources at this time.</strong></p>
-     <p style="margin-top:0.5rem;">Donations made while the program is paused are still gratefully accepted and will be used to support our work when the program reopens. We will post an announcement at this site when the situation improves. If you are facing eviction right now, please see <a href="/apply/">our apply page</a> for alternative resources.</p>
-    </div>
-
     <h2>Where your gift goes</h2>
     <p>HOUSE, Inc. is a small organization with a volunteer board. Administrative overhead is kept to a minimum so that the largest possible share of every donation reaches families in the form of direct rental assistance.</p>
-
     <p>Donations are used to pay rent, mortgage arrears, and core housing costs directly to landlords or housing providers. Designated gifts are applied to the purpose you specify; if a designation becomes fully funded, remaining funds are redirected to the area of greatest need.</p>
 
     <h2>How to give</h2>
 
     <div class="callout">
+     <h3>Online via PayPal Giving Fund</h3>
+     <p><a href="https://www.paypal.com/fundraiser/charity/4368585" rel="noopener" target="_blank"><strong>Donate online at paypal.com/fundraiser/charity/4368585 →</strong></a></p>
+     <p>Donations made through the PayPal Giving Fund are <strong>100% passed through to HOUSE, Inc.</strong> — PayPal covers all transaction fees so every dollar you give reaches families in need. PayPal Giving Fund donations are also eligible for tax-deductible status.</p>
+     <p class="fine">This is often the easiest and most cost-effective way to give. A receipt is issued automatically by PayPal.</p>
+    </div>
+
+    <div class="callout">
+     <h3>Shop our Bonfire store</h3>
+     <p>Support HOUSE, Inc. by purchasing apparel and gifts from our <a href="https://www.bonfire.com/store/house-inc-fundraiser/" rel="noopener" target="_blank"><strong>Bonfire fundraising store →</strong></a>. A portion of every purchase helps fund our emergency rental assistance program.</p>
+    </div>
+
+    <div class="callout">
      <h3>By check</h3>
      <p>Make checks payable to <strong>HOUSE, Inc.</strong></p>
      <p>Mail to:</p>
-     <p style="font-family: Georgia, serif; font-size: 1.05rem; margin-top: 0.5rem;">
+     <p class="callout-address">
       HOUSE, Inc.<br>
       3225 McLeod Dr, Suite 100<br>
       Las Vegas, NV 89121
      </p>
-     <p style="font-size:0.9rem; color: var(--ink-muted); margin-top:0.75rem;">Please include a note with your email address so we can send a tax receipt.</p>
+     <p class="fine">Please include a note with your email address so we can send a tax receipt.</p>
     </div>
 
     <div class="callout">
      <h3>By bank transfer (ACH or wire)</h3>
      <p>For ACH or wire transfers, please email <a href="mailto:donations@houseinc501c3.com">donations@houseinc501c3.com</a> and we will send you our banking details securely.</p>
-     <p style="font-size:0.9rem; color: var(--ink-muted); margin-top:0.5rem;">Our accounts are held at Chase.</p>
-    </div>
-
-    <div class="callout">
-     <h3>Online via PayPal Giving Fund</h3>
-     <p>Donate online at <a href="https://www.paypal.com/fundraiser/charity/4368585" rel="noopener" target="_blank"><strong>paypal.com/fundraiser/charity/4368585</strong></a>.</p>
-     <p>Donations made through the PayPal Giving Fund are <strong>100% passed through to HOUSE, Inc.</strong> — PayPal covers all transaction fees so every dollar you give reaches families in need. PayPal Giving Fund donations are also eligible for tax-deductible status.</p>
-     <p style="font-size:0.9rem; color: var(--ink-muted); margin-top:0.5rem;">This is often the easiest and most cost-effective way to give. A receipt is issued automatically by PayPal.</p>
+     <p class="fine">Our accounts are held at Chase.</p>
     </div>
 
     <div class="callout">
@@ -87,11 +102,6 @@
     <div class="callout">
      <h3>Stock, crypto, or other assets</h3>
      <p>We accept gifts of appreciated stock and can discuss other in-kind contributions on a case-by-case basis. Please email <a href="mailto:donations@houseinc501c3.com">donations@houseinc501c3.com</a> to begin.</p>
-    </div>
-
-    <div class="callout">
-     <h3>Shop our Bonfire store</h3>
-     <p>Support HOUSE, Inc. by purchasing apparel and gifts from our <a href="https://www.bonfire.com/store/house-inc-fundraiser/" rel="noopener" target="_blank"><strong>Bonfire fundraising store</strong></a>. A portion of every purchase helps fund our emergency rental assistance program.</p>
     </div>
 
     <h2>Designating your gift</h2>
@@ -106,17 +116,16 @@
     <p>HOUSE, Inc. is a 501(c)(3) tax-exempt organization. Donations are deductible under IRC §170. Bequests, devices, transfers, and gifts are deductible under §§2055, 2106, and 2522.</p>
     <p>For donations of $250 or more, a written acknowledgment is provided for your tax records. Email <a href="mailto:donations@houseinc501c3.com">donations@houseinc501c3.com</a> if you need a receipt or have questions about your contribution.</p>
 
-    <div class="callout" style="border-left-color: #c84a4a; background: #fdf6f6;">
-     <h3 style="color:#a83838;">A note on fraud awareness</h3>
-     <p style="font-size: 0.95rem;">Unfortunately, small nonprofits are frequent targets of check-overpayment and similar fraud. We will <strong>never</strong> ask you to:</p>
-     <ul style="font-size: 0.95rem;">
+    <div class="callout callout-fraud">
+     <h3>A note on fraud awareness</h3>
+     <p>Unfortunately, small nonprofits are frequent targets of check-overpayment and similar fraud. We will <strong>never</strong> ask you to:</p>
+     <ul>
       <li>Forward any portion of a donation to a third party</li>
       <li>Pay any fee to receive a donation</li>
       <li>Provide bank login credentials, wire instructions to an unfamiliar account, or gift card numbers</li>
      </ul>
-     <p style="font-size: 0.95rem;">If you receive a suspicious message claiming to be from HOUSE, Inc. or a board member, please report it to <a href="mailto:donations@houseinc501c3.com">donations@houseinc501c3.com</a>.</p>
+     <p>If you receive a suspicious message claiming to be from HOUSE, Inc. or a board member, please report it to <a href="mailto:donations@houseinc501c3.com">donations@houseinc501c3.com</a>.</p>
     </div>
-
    </div>
   </div>
 
@@ -128,8 +137,50 @@
    </div>
   </section>
  </main>
- <div id="site-footer"></div>
- <script src="/nav.js"></script>
- <script src="/footer.js"></script>
+ <footer class="site-footer">
+  <div class="container">
+   <div class="footer-grid">
+    <div>
+     <h4>HOUSE, Inc.</h4>
+     <p>Housing Opportunities to Ultimately Shelter Everyone, Inc.</p>
+     <p>A 501(c)(3) nonprofit preventing homelessness through emergency rental assistance.</p>
+     <p class="footer-ein">EIN 87-1948148</p>
+    </div>
+    <div>
+     <h4>Get Involved</h4>
+     <ul>
+      <li><a href="/donate/">Donate</a></li>
+      <li><a href="/programs/">Our Programs</a></li>
+      <li><a href="/apply/">Apply for Help</a></li>
+      <li><a href="/contact/">Contact</a></li>
+     </ul>
+    </div>
+    <div>
+     <h4>Contact</h4>
+     <p>3225 McLeod Dr, Suite 100<br>Las Vegas, NV 89121</p>
+     <p>702-871-8535</p>
+     <p><a href="mailto:donations@houseinc501c3.com">donations@houseinc501c3.com</a></p>
+     <p><a href="mailto:info@houseinc501c3.com">info@houseinc501c3.com</a></p>
+    </div>
+    <div>
+     <h4>Follow Us</h4>
+     <ul>
+      <li><a href="https://www.facebook.com/HOUSE.nonprofit.501c3" rel="noopener" target="_blank">Facebook</a></li>
+      <li><a href="https://www.linkedin.com/company/houseinc501c3/" rel="noopener" target="_blank">LinkedIn</a></li>
+      <li><a href="https://x.com/HOUSEinc501c3" rel="noopener" target="_blank">X (Twitter)</a></li>
+     </ul>
+    </div>
+   </div>
+   <p class="footer-tax">HOUSE, Inc. is a 501(c)(3) tax-exempt organization. Donations are tax-deductible to the fullest extent allowed by law.</p>
+   <div class="footer-bottom">
+    <span>© 2026 HOUSE, Inc. — Housing Opportunities to Ultimately Shelter Everyone, Inc.</span>
+    <nav aria-label="Footer">
+     <a href="/board/">Board &amp; Governance</a>
+     <a href="/transparency/">Financial Transparency</a>
+     <a href="/contact/">Contact</a>
+    </nav>
+   </div>
+  </div>
+ </footer>
 </body>
 </html>
